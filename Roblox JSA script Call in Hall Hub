@@ -1,0 +1,8 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Call in Hall Hub", "BloodTheme")
+local Tab = Window:NewTab("JSA")
+local Section = Tab:NewSection("Hall Class")
+Section:NewButton("Infinite Yield", "Get admin commands", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+    print("Clicked")
+end)
