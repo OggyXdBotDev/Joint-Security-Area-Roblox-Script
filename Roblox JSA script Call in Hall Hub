@@ -1,12 +1,40 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Call in Hall Hub", "BloodTheme")
-local Tab = Window:NewTab("JSA")
-local Section = Tab:NewSection("Hall Class")
-Section:NewButton("Infinite Yield", "Get admin commands", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-    print("Clicked")
-end)
-Section:NewButton("Dex Explorer", "Opens latest version of Dex Explorer", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/DEX-Explorer/main/Mobile.lua"))()
-    print("Clicked")
-end)
+local player = game.Players.LocalPlayer
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Call in Hall Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Joint Security Area",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Admin Panel"
+})
+
+OrionLib:MakeNotification({
+	Name = "WELCOME",
+	Content = "Thanks for using it",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+Tab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Dex Explorer",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/DEX-Explorer/main/Mobile.lua"))()
+  	end    
+})
+
+ColorPicker:Set(Color3.fromRGB(255,255,255))
+
+OrionLib:Init()
