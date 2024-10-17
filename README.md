@@ -4,7 +4,7 @@ This script is still under development (many more features like NiS Tools will b
 Stay tuned :) 
 
 
-NOTE, IF YOU'RE ON ARCEUS X NEO OR HAVING PROBLEM WITH ORION LIBRARY GUI,use this script:
+NOTE, IF YOU'RE ON ARCEUS X NEO OR HAVING PROBLEM WITH ORION LIBRARY UI,use this script:
 
 local syn = getgenv().syn
 getgenv().syn = false
